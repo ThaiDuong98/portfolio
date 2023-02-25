@@ -5,8 +5,8 @@ import "./about.css";
 const About = ({scrollRef, observeActiveComponent}) => {
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
-    rootMargin: "0px",
-    threshold: 0.3
+    rootMargin: "0px 0px -200px 0px",
+    threshold: 0.4
   })
 
   useEffect(() => {
@@ -16,20 +16,24 @@ const About = ({scrollRef, observeActiveComponent}) => {
   }, [isVisible])
 
   return (
-    <main className="about-container" id="about" ref={scrollRef}>
-      <section className={isVisible ? "about-left active" : "about-left"}  ref={containerRef}>
+    <div className="about-section" ref={scrollRef} id="about">
+      <div className="about-header" ref={containerRef}>
+        <a className={isVisible ? "cc active" : "cc"}>About</a>
+      </div>
+      <main className="about-container">
+      <section className={isVisible ? "about-left active" : "about-left"}>
         <img src="/imgs/about.jpg" />
       </section>
       <section className={isVisible ? "about-right active" : "about-right"}>
         <p>
-          My name is Duong, I'm 24 years old. I studied at Can Tho University
+          My name is Duong, I was born in 1998. I studied at Can Tho University
           with a major in communication and computer network.
         </p>
 
         <p>
           I have more than 1.5+ year of experience in the web field, I
           specialize in UI building and API integration for ERP systems such as
-          such as delivery tracking system for laundry factory, logistic...
+          delivery tracking system for laundry factory, logistic...
         </p>
 
         <p>
@@ -38,6 +42,7 @@ const About = ({scrollRef, observeActiveComponent}) => {
         </p>
       </section>
     </main>
+    </div>
   );
 };
 

@@ -3,6 +3,7 @@ import './App.css';
 import About from './components/about/About';
 import Experience from './components/experience/Experience';
 import HeaderPage from './components/header/Header';
+import Projects from './components/projects/Projects';
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
   const [activeMenu, setActiveMenu] = useState(0)
 
   const handleClick = () => {
-    scrollRef.current?.scrollIntoView({behavior: 'smooth'});
+    scrollRef.current?.scrollIntoView({behavior: 'smooth', block: 'start'});
   };
 
   const observeActiveComponent = (active) => {
@@ -23,6 +24,7 @@ function App() {
       <HeaderPage scrollRef={scrollRef} handleClick={handleClick} activeHeaderMenu={activeMenu} observeActiveComponent={observeActiveComponent}/>
       <About scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
       <Experience scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
+      <Projects scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
     </div>
   );
 }

@@ -7,8 +7,8 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
   const [active, setActive] = useState(1);
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
-    rootMargin: "100px",
-    threshold: 0.2
+    rootMargin: "0px 0px -200px 0px",
+    threshold: 0.4
   })
 
   useEffect(() => {
