@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FaFacebook, FaLinkedin, FaBars, FaPlus } from "react-icons/fa";
 import useElementOnScreen from "../../hook/useElementOnScreen";
 import "./header.css";
 
 const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComponent}) => {
   const [active, setActive] = useState(1);
+  const test = useRef(null)
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
     rootMargin: "0px 0px -200px 0px",
@@ -54,10 +55,25 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
     }
   }, [])
 
+  const handleClickOutside = (e) => {
+    if(test.current && !test.current.contains(e.target)){
+      toggleMenu()
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [test])
+
   return (
     <header ref={scrollRef}>
       <div className="header-container" id="#">
-        <nav className="nav-container">
+        <nav className="nav-container" ref={test}>
           <h1>Portfolio.</h1>
           <ul>
             <li onClick={() => activeMenu(1)}>

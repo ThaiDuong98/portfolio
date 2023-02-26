@@ -49,6 +49,11 @@
 
 .timeline-date{
     color: #fff;
+    font-weight: bold;
+}
+
+.vertical-timeline-element-content{
+    background: #c2b7b7;
 }
 
 @media screen and (max-width: 1168px) {

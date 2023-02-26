@@ -205,6 +205,10 @@ header{
 }
 
 @media screen and (max-width: 768px){
+    .nav-container{
+        padding: 10px 20px;
+    }
+
     .nav-container ul{
         position: absolute;
         top: -1000px;
@@ -258,7 +262,7 @@ header{
 
 @media screen and (max-width: 480px), (max-width: 666px) {
     .header-container, .nav-container{
-        padding: 10px 30px;
+        padding: 10px 20px;
     }
 
     .header-container .hero{
