@@ -41,6 +41,19 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
     open.classList.toggle("hide");
   };
 
+  const distinguishNavbar = () => {
+    const navbar = document.querySelector(".nav-container")
+    navbar.classList.toggle("active", window.scrollY > 0)
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", distinguishNavbar)
+
+    return () => {
+      window.removeEventListener("scroll", distinguishNavbar)
+    }
+  }, [])
+
   return (
     <header ref={scrollRef}>
       <div className="header-container" id="#">
