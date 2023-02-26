@@ -18,7 +18,7 @@ const About = ({scrollRef, observeActiveComponent}) => {
   return (
     <div className="about-section" ref={scrollRef} id="about">
       <div className="about-header" ref={containerRef}>
-        <a className={isVisible ? "cc active" : "cc"}>About</a>
+        <a className={isVisible ? "active" : ""}>About</a>
       </div>
       <main className="about-container">
       <section className={isVisible ? "about-left active" : "about-left"}>

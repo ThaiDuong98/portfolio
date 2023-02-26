@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import "react-vertical-timeline-component/style.min.css";
 import './App.css';
 import About from './components/about/About';
 import Experience from './components/experience/Experience';
