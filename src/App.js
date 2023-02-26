@@ -5,6 +5,7 @@ import About from './components/about/About';
 import Experience from './components/experience/Experience';
 import HeaderPage from './components/header/Header';
 import Projects from './components/projects/Projects';
+import Skill from './components/skill/Skill';
 
 
 function App() {
@@ -16,7 +17,6 @@ function App() {
   };
 
   const observeActiveComponent = (active) => {
-    console.log("active", active)
     setActiveMenu(active)
   }
 
@@ -25,6 +25,7 @@ function App() {
       <HeaderPage scrollRef={scrollRef} handleClick={handleClick} activeHeaderMenu={activeMenu} observeActiveComponent={observeActiveComponent}/>
       <About scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
       <Experience scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
+      <Skill scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
       <Projects scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
     </div>
   );

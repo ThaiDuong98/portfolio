@@ -33,6 +33,15 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
     handleClick()
   };
 
+  const removeMenu = () => {
+    let menu = document.querySelector("ul");
+    let close = document.querySelector(".close-menu-icon");
+    let open = document.querySelector(".open-menu-icon");
+    close.classList.remove("open");
+    menu.classList.remove("open");
+    open.classList.remove("hide");
+  };
+
   const toggleMenu = () => {
     let menu = document.querySelector("ul");
     let close = document.querySelector(".close-menu-icon");
@@ -57,7 +66,7 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
 
   const handleClickOutside = (e) => {
     if(test.current && !test.current.contains(e.target)){
-      toggleMenu()
+      removeMenu()
     }
   }
 
@@ -92,13 +101,13 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
               </a>
             </li>
             <li onClick={() => activeMenu(4)}>
-              <a href="#project" className={active === 4 ? "active" : ""}>
-                Projects
+              <a href="#skill" className={active === 4 ? "active" : ""}>
+                Skill
               </a>
             </li>
             <li onClick={() => activeMenu(5)}>
-              <a href="#contact" className={active === 5 ? "active" : ""}>
-                Contact
+              <a href="#project" className={active === 5 ? "active" : ""}>
+                Project
               </a>
             </li>
           </ul>
