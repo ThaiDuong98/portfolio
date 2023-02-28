@@ -65,21 +65,30 @@
     position: absolute;
     top: -10%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -20px);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.3s;
 }
 
 .skill-container .skill-content .skill-header .framework{
     position: absolute;
     bottom: -10%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, 20px);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.7s;
 }
 
 .skill-container .skill-content .skill-header .tool{
     position: absolute;
     left: -20%;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-20px, -50%);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.5s;
 }
 
 .skill-container .skill-content .skill-header .package{
@@ -87,8 +96,29 @@
     right: -20%;
     top: 50%;
     transform: translateY(-50%);
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.9s;
 }
 
+.skill-container .skill-content .skill-header.active .languages{
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.skill-container .skill-content .skill-header.active .framework{
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+
+.skill-container .skill-content .skill-header.active .tool{
+    opacity: 1;
+    transform: translate(0px, -50%);
+}
+
+.skill-container .skill-content .skill-header.active .package{
+    opacity: 1;
+}
 
 
 

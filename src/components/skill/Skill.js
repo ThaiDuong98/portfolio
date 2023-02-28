@@ -19,7 +19,7 @@ const Skill = ({ scrollRef, observeActiveComponent }) => {
   return (
     <section ref={scrollRef} className="skill-container">
       <div ref={containerRef} className="skill-content">
-        <div className="skill-header">
+        <div className={isVisible ? "skill-header active" : "skill-header"}>
             <a className={isVisible ? "active" : ""}>Skills</a>
             <div className="languages sub-skill">
                 <img src="/imgs/css-3.png"/>
