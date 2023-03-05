@@ -125,14 +125,18 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
             <h1>Pham Thai Duong</h1>
             <h5>And I'm a front-end developer</h5>
             <div className="social-icon">
-              <i className="icon">
-                <FaFacebook />
-              </i>
-              <i className="icon">
-                <FaLinkedin />
-              </i>
+              <a href="https://www.facebook.com/phamthaiduong98/">
+                <i className="icon">
+                  <FaFacebook />
+                </i>
+              </a>
+              <a href="https://www.linkedin.com/in/thaiduong98/">
+                <i className="icon">
+                  <FaLinkedin />
+                </i>
+              </a>
             </div>
-            <button className="btn-download">Download cv</button>
+            <a className="btn-download" href="https://thaiduong98.github.io/resume/CV_Frontend_PhamThaiDuong.pdf">Download cv</a>
           </div>
 
           <div className={isVisible ? "hero-right active" : "hero-right"}>

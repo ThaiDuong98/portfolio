@@ -5,8 +5,8 @@ import "./skill.css";
 const Skill = ({ scrollRef, observeActiveComponent }) => {
   const [containerRef, isVisible] = useElementOnScreen({
     root: null,
-    rootMargin: "0px",
-    threshold: 1,
+    rootMargin: "0px 0px -200px 0px",
+    threshold: 0.9
   });
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const Skill = ({ scrollRef, observeActiveComponent }) => {
 
 
   return (
-    <section ref={scrollRef} className="skill-container">
+    <section ref={scrollRef} className="skill-container" id="skill">
       <div ref={containerRef} className="skill-content">
         <div className={isVisible ? "skill-header active" : "skill-header"}>
             <a className={isVisible ? "active" : ""}>Skills</a>

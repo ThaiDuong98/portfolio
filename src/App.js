@@ -3,6 +3,7 @@ import "react-vertical-timeline-component/style.min.css";
 import './App.css';
 import About from './components/about/About';
 import Experience from './components/experience/Experience';
+import Footer from './components/footer/Footer';
 import HeaderPage from './components/header/Header';
 import Projects from './components/projects/Projects';
 import Skill from './components/skill/Skill';
@@ -17,6 +18,7 @@ function App() {
   };
 
   const observeActiveComponent = (active) => {
+    console.log("active",active)
     setActiveMenu(active)
   }
 
@@ -27,6 +29,7 @@ function App() {
       <Experience scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
       <Skill scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
       <Projects scrollRef={scrollRef} observeActiveComponent={observeActiveComponent}/>
+      <Footer />
     </div>
   );
 }

@@ -105,15 +105,16 @@ header{
     margin-top: 15px;
 }
 
-.header-container .hero .hero-left .social-icon .icon{
+.header-container .hero .hero-left .social-icon a .icon{
     margin-right: 10px;
     font-size: 20px;
     border: 1px solid  var(--blue-color);
     border-radius: 50%;
-    padding: 5px 5px;
+    padding: 4px 4px;
     box-shadow: 0 0 2px #888;
     display: inline-flex;
     cursor: pointer;
+    color: #fff;
 }
 
 .header-container .hero .hero-left .btn-download{
@@ -129,6 +130,8 @@ header{
     box-shadow: 0 0 1rem var(--blue-color);
     cursor: pointer;
     transition: 1.5s;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .header-container .hero .hero-left .btn-download:hover{
