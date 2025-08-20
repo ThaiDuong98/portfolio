@@ -140,7 +140,7 @@ const HeaderPage = ({scrollRef, handleClick, activeHeaderMenu, observeActiveComp
           </div>
 
           <div className={isVisible ? "hero-right active" : "hero-right"}>
-            <img src="/imgs/me.jpg" />
+            <img src="/imgs/avatar.jpg" />
           </div>
         </section>
       </div>
